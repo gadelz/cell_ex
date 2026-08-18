@@ -4,96 +4,170 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Button } from '@/components/Button'
 
+// Animation variants for slow fade-in (1s+)
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.2,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+}
+
+const fadeIn = {
+  initial: { opacity: 0 },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 1.4,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+}
+
 export function HeroSection() {
   return (
-    <section className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden bg-cell-gradient">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(16,185,129,0.03)_0%,_transparent_70%)]" />
-      
-      <div className="section-container relative z-10 py-20 md:py-32">
-        <div className="max-w-4xl mx-auto text-center">
+    <section className="relative min-h-screen pt-16 bg-[#0A0A0A] overflow-hidden">
+      {/* Background Grid Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(243,244,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(243,244,246,0.03)_1px,transparent_1px)] bg-[size:40px_40px]" />
+
+      <div className="section-container py-16 md:py-24">
+        {/* Bento Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-5">
+
+          {/* ===== BOX 1: Main Headline (Large) ===== */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="mb-8"
+            variants={fadeInUp}
+            initial="initial"
+            animate="animate"
+            className="md:col-span-8 md:row-span-2 relative bg-[#171717]/40 border border-[rgba(243,244,246,0.06)] rounded-sm p-8 md:p-12 flex flex-col justify-between min-h-[400px] md:min-h-[500px] group hover:border-[rgba(16,185,129,0.15)] transition-colors duration-500"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-cell-surface border border-cell-emerald/20 rounded-sm text-xs font-mono text-cell-emerald tracking-wider uppercase">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cell-emerald opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-cell-emerald" />
+            {/* Decorative Corner Markers */}
+            <div className="absolute top-0 left-0 w-2 h-2 border-l border-t border-[#10B981]/30" />
+            <div className="absolute top-0 right-0 w-2 h-2 border-r border-t border-[#10B981]/30" />
+            <div className="absolute bottom-0 left-0 w-2 h-2 border-l border-b border-[#10B981]/30" />
+            <div className="absolute bottom-0 right-0 w-2 h-2 border-r border-b border-[#10B981]/30" />
+
+            <div>
+              <span className="inline-flex items-center gap-2 px-3 py-1 bg-[#10B981]/10 border border-[#10B981]/20 rounded-sm text-xs font-mono text-[#10B981] tracking-wider uppercase mb-6">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10B981] opacity-75" />
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#10B981]" />
+                </span>
+                System Online
               </span>
-              Cell'EX \u2014 Digital & Technical Services
-            </span>
+
+              <h1 className="font-mono font-bold text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-[#F3F4F6] mb-6">
+                Cell'EX: Solusi<br />
+                <span className="text-[#10B981]">Layanan Digital</span><br />
+                & Teknis Tanpa Batas.
+              </h1>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <Button size="lg" asChild>
+                <Link href="#services">
+                  Lihat Layanan
+                </Link>
+              </Button>
+              <Button variant="secondary" size="lg" asChild>
+                <Link
+                  href="https://wa.me/6281234567890?text=Halo%20Cell%27EX%2C%20saya%20ingin%20konsultasi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Chat WhatsApp
+                </Link>
+              </Button>
+            </div>
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="font-mono font-bold text-4xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight text-cell-text mb-6"
-          >
-            Layanan Teknis & Digital
-            <br />
-            <span className="text-cell-emerald">Tanpa Ribet</span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="font-sans font-light text-lg md:text-xl text-[rgba(243,244,246,0.7)] max-w-2xl mx-auto mb-10 leading-relaxed"
-          >
-            Website, API, mobile app, service laptop/HP, setup jaringan \u2014 pesan langsung lewat WhatsApp, proses cepat, harga transparan.
-          </motion.p>
-
+          {/* ===== BOX 2: Abstract CSS Visual (Code Pattern) ===== */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            variants={fadeIn}
+            initial="initial"
+            animate="animate"
+            transition={{ delay: 0.3 }}
+            className="md:col-span-4 relative bg-[#171717]/40 border border-[rgba(243,244,246,0.06)] rounded-sm p-6 min-h-[200px] overflow-hidden group hover:border-[rgba(16,185,129,0.1)] transition-colors duration-500"
           >
-            <Button size="lg" asChild>
-              <Link href="#services">Lihat Semua Layanan</Link>
-            </Button>
-            <Button variant="secondary" size="lg" asChild>
-              <Link href="https://wa.me/6281234567890?text=Halo%20Cell%27EX%2C%20saya%20ingin%20konsultasi%20layanan" target="_blank" rel="noopener noreferrer">
-                Chat WhatsApp
-              </Link>
-            </Button>
+            <div className="absolute top-3 left-3 font-mono text-[10px] text-[#F3F4F6]/30 uppercase tracking-widest">
+              // Pattern Matrix
+            </div>
+            {/* CSS Abstract Grid Animation */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="grid grid-cols-6 gap-2 opacity-20 group-hover:opacity-40 transition-opacity duration-700">
+                {[...Array(36)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="w-2 h-2 bg-[#10B981] rounded-[1px] animate-pulse"
+                    style={{
+                      animationDelay: `${i * 0.1}s`,
+                      animationDuration: '3s',
+                    }}
+                  />
+                ))}
+              </div>
+            </div>
           </motion.div>
 
+          {/* ===== BOX 3: Polka Dot Pattern ===== */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-16 flex flex-wrap items-center justify-center gap-8 text-sm font-sans font-light text-[rgba(243,244,246,0.5)]"
+            variants={fadeIn}
+            initial="initial"
+            animate="animate"
+            transition={{ delay: 0.5 }}
+            className="md:col-span-4 relative bg-[#171717]/40 border border-[rgba(243,244,246,0.06)] rounded-sm overflow-hidden min-h-[200px] group hover:border-[rgba(16,185,129,0.1)] transition-colors duration-500"
           >
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-cell-emerald" />
-              <span>{'<'} 5 menit</span>
+            <div className="absolute top-3 left-3 font-mono text-[10px] text-[#F3F4F6]/30 uppercase tracking-widest z-10">
+              // Dot Matrix
             </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-cell-emerald" />
-              <span>Harga transparan</span>
+            {/* Polka Dot Pattern with Low Transparency */}
+            <div
+              className="absolute inset-0 opacity-15 group-hover:opacity-25 transition-opacity duration-700"
+              style={{
+                backgroundImage: 'radial-gradient(circle, #10B981 1px, transparent 1px)',
+                backgroundSize: '20px 20px',
+              }}
+            />
+            {/* Scanning Line Animation */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#10B981]/5 to-transparent h-[20%] w-full animate-[scan_4s_linear_infinite]" />
+          </motion.div>
+
+          {/* ===== BOX 4: Stats / Trust Indicators ===== */}
+          <motion.div
+            variants={fadeInUp}
+            initial="initial"
+            animate="animate"
+            transition={{ delay: 0.7 }}
+            className="md:col-span-8 relative bg-[#171717]/40 border border-[rgba(243,244,246,0.06)] rounded-sm p-6 md:p-8 flex items-center justify-between min-h-[180px] group hover:border-[rgba(16,185,129,0.15)] transition-colors duration-500"
+          >
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
+                <span className="font-mono text-sm text-[#F3F4F6]/60">Response Time</span>
+              </div>
+              <div className="font-mono text-3xl md:text-4xl font-bold text-[#10B981]">
+                {'<'} 5 menit
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-cell-emerald" />
-              <span>Garansi kerja</span>
+
+            <div className="space-y-3 text-right">
+              <div className="flex items-center gap-3 justify-end">
+                <span className="font-mono text-sm text-[#F3F4F6]/60">Garansi</span>
+                <span className="w-2 h-2 rounded-full bg-[#10B981] animate-pulse" />
+              </div>
+              <div className="font-mono text-3xl md:text-4xl font-bold text-[#10B981]">
+                100%
+              </div>
             </div>
+
+            <div className="hidden md:block absolute right-20 top-1/2 -translate-y-1/2 w-px h-16 bg-[#10B981]/20" />
           </motion.div>
         </div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.8 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
-      >
-        <svg className="w-6 h-6 text-[rgba(243,244,246,0.3)]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
-      </motion.div>
     </section>
   )
 }
