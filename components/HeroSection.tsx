@@ -61,16 +61,16 @@ export function HeroSection() {
               </span>
 
               <h1 className="font-mono font-bold text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-[#F3F4F6] mb-6">
-                Cell'EX: Solusi<br />
-                <span className="text-[#10B981]">Layanan Digital</span><br />
-                & Teknis Tanpa Batas.
+                Cell'EX Unlimited<br />
+                <span className="text-[#10B981]">Digital</span><br />
+                & Technical Services.
               </h1>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Button size="lg" asChild>
                 <Link href="#services">
-                  Lihat Layanan
+                  View Services
                 </Link>
               </Button>
               <Button variant="secondary" size="lg" asChild>
@@ -79,7 +79,7 @@ export function HeroSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Chat WhatsApp
+                  WhatsApp Chat
                 </Link>
               </Button>
             </div>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'Cell\'EX | Digital & Technical Services',
     description: 'Direktori layanan teknis dan digital. Pesan langsung via WhatsApp.',
     type: 'website',
-    locale: 'id_ID',
+    locale: 'en_US',
     siteName: 'Cell\'EX',
   },
   robots: {
@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="id">
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

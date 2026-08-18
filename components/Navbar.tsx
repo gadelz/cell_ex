@@ -30,7 +30,7 @@ export function Navbar() {
                 rel="noopener noreferrer"
                 className="text-xs"
               >
-                Hubungi Kami
+                Contact Us
               </Link>
             </Button>
 
