@@ -1,5 +1,41 @@
 [
   {
+    "id": "ai-agent-setup",
+    "name": "Setup, Install & Konfigurasi AI Agent",
+    "category": "Digital",
+    "description": "Konfigurasi AI Agent lokal atau cloud-based. Setup LLM, RAG pipeline, custom prompts, dan integrasi API.",
+    "price": "Mulai Rp 750.000",
+    "features": ["Local LLM Setup", "RAG Pipeline", "Custom Prompts", "API Integration"],
+    "whatsappMessage": "Halo Cell'EX, saya butuh setup AI Agent. Bisa konsultasi dulu?"
+  },
+  {
+    "id": "termux-optimization",
+    "name": "Troubleshooting & Optimasi Termux",
+    "category": "Digital",
+    "description": "Optimasi Termux untuk development mobile. Package management, environment setup, scripting, dan troubleshooting error.",
+    "price": "Mulai Rp 150.000",
+    "features": ["Package Setup", "Environment Config", "Scripting Automation", "Error Fix"],
+    "whatsappMessage": "Halo Cell'EX, Termux saya bermasalah. Bisa dibantu?"
+  },
+  {
+    "id": "adblock-service",
+    "name": "Jasa Blokir Iklan di HP",
+    "category": "Teknis",
+    "description": "Blokir iklan di seluruh sistem HP (Android/iOS). Setup DNS filtering, host file modification, dan app-based adblocker.",
+    "price": "Mulai Rp 50.000",
+    "features": ["System-wide Adblock", "DNS Filtering", "No Root Required", "Lifetime Support"],
+    "whatsappMessage": "Halo Cell'EX, HP saya banyak iklan. Bisa diblokir?"
+  },
+  {
+    "id": "llm-api-deal",
+    "name": "API LLM Murah — $5 dengan Credit $50",
+    "category": "Digital",
+    "description": "Akses API LLM premium (GPT-4, Claude, Gemini) dengan harga khusus. Credit $50 hanya dengan bayar $5. Cocok untuk developer dan startup.",
+    "price": "$5 (Credit $50)",
+    "features": ["GPT-4 Access", "Claude API", "Gemini Pro", "Instant Delivery"],
+    "whatsappMessage": "Halo Cell'EX, saya mau beli API LLM credit $50 seharga $5. Prosesnya gimana?"
+  },
+  {
     "id": "web-dev",
     "name": "Pengembangan Website",
     "category": "Digital",
@@ -9,24 +45,6 @@
     "whatsappMessage": "Halo Cell'EX, saya tertarik dengan layanan Pengembangan Website. Bisa dibantu info lebih lanjut?"
   },
   {
-    "id": "api-dev",
-    "name": "REST API / Backend Development",
-    "category": "Digital",
-    "description": "Pembangunan API scalable dengan Node.js/Express atau Go. Database PostgreSQL/MongoDB. Auth JWT, rate limiting, dokumentasi Swagger.",
-    "price": "Mulai Rp 1.800.000",
-    "features": ["RESTful / GraphQL", "JWT Auth", "Swagger Docs", "Docker Ready"],
-    "whatsappMessage": "Halo Cell'EX, saya butuh layanan REST API / Backend Development. Bisa diskusi requirement?"
-  },
-  {
-    "id": "mobile-app",
-    "name": "Aplikasi Mobile (React Native)",
-    "category": "Digital",
-    "description": "Aplikasi iOS & Android single codebase. Expo/React Native CLI. Push notification, offline support, app store deployment.",
-    "price": "Mulai Rp 5.000.000",
-    "features": ["Cross-platform", "Push Notifications", "Offline Mode", "App Store Deploy"],
-    "whatsappMessage": "Halo Cell'EX, saya ingin buat aplikasi mobile. Bisa konsultasi dulu?"
-  },
-  {
     "id": "laptop-repair",
     "name": "Service Laptop / PC",
     "category": "Teknis",
@@ -34,41 +52,5 @@
     "price": "Mulai Rp 150.000",
     "features": ["Diagnosa Gratis", "Garansi Service", "Pickup Area Tertentu", "Original Parts"],
     "whatsappMessage": "Halo Cell'EX, laptop saya bermasalah. Bisa di-service?"
-  },
-  {
-    "id": "phone-repair",
-    "name": "Service HP / Smartphone",
-    "category": "Teknis",
-    "description": "Ganti layar, battery, charging port, kamera. Unlock FRP, flash firmware, data recovery. Spare part berkualitas.",
-    "price": "Mulai Rp 200.000",
-    "features": ["Original/Grade A Parts", "Garansi 3 Bulan", "Express 1 Jam", "Data Aman"],
-    "whatsappMessage": "Halo Cell'EX, HP saya butuh service. Berapa estimasi biayanya?"
-  },
-  {
-    "id": "network-setup",
-    "name": "Setup Jaringan & Server",
-    "category": "Teknis",
-    "description": "Konfigurasi router, VLAN, VPN, firewall. Setup home/office network. Linux server hardening, Docker, reverse proxy Nginx.",
-    "price": "Mulai Rp 500.000",
-    "features": ["Network Design", "Security Hardening", "Monitoring Setup", "Dokumentasi Lengkap"],
-    "whatsappMessage": "Halo Cell'EX, butuh bantu setup jaringan kantor/rumah. Bisa survey dulu?"
-  },
-  {
-    "id": "ui-design",
-    "name": "UI/UX Design & Prototyping",
-    "category": "Digital",
-    "description": "Desain interface modern Figma. User research, wireframe, prototype interaktif, design system, handoff ke developer.",
-    "price": "Mulai Rp 1.200.000",
-    "features": ["Figma Source File", "Design System", "Interactive Prototype", "Developer Handoff"],
-    "whatsappMessage": "Halo Cell'EX, butuh desain UI/UX untuk project saya. Bisa lihat portfolio dulu?"
-  },
-  {
-    "id": "seo-audit",
-    "name": "SEO Audit & Optimasi",
-    "category": "Digital",
-    "description": "Audit teknis, on-page, off-page. Keyword research, competitor analysis, core web vitals, schema markup, laporan bulanan.",
-    "price": "Mulai Rp 800.000",
-    "features": ["Technical Audit", "Keyword Strategy", "Monthly Report", "Core Web Vitals"],
-    "whatsappMessage": "Halo Cell'EX, mau audit SEO website saya. Prosesnya gimana?"
   }
 ]
