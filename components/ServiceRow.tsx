@@ -1,15 +1,15 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import type { Service } from '@/lib/types'
 
 interface ServiceRowProps {
   service: Service
   index: number
+  onClick: () => void
 }
 
-export function ServiceRow({ service, index }: ServiceRowProps) {
+export function ServiceRow({ service, index, onClick }: ServiceRowProps) {
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}
@@ -24,6 +24,7 @@ export function ServiceRow({ service, index }: ServiceRowProps) {
         backgroundColor: 'rgba(23, 23, 23, 0.8)',
         transition: { duration: 0.2 },
       }}
+      onClick={onClick}
       className="group relative flex items-center justify-between px-4 md:px-6 py-4 border-b border-[rgba(243,244,246,0.06)] cursor-pointer"
     >
       {/* Row Content */}
@@ -39,7 +40,7 @@ export function ServiceRow({ service, index }: ServiceRowProps) {
             {service.name}
           </span>
           {/* Category badge (visible on hover) */}
-          <span className="hidden md:inline-block mt-1 text-[10px] font-sans text-[rgba(243,244,246,0.4)] uppercase tracking-wider">
+          <span className="hidden md:inline-block mt-1 text-[10px] font-sans text-[rgba(243,244,246,0.4)] uppercase tracking-widest">
             {service.category}
           </span>
         </div>

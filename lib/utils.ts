@@ -10,6 +10,12 @@ export function generateWhatsAppLink(message: string, phoneNumber: string = '628
   return `https://wa.me/${phoneNumber}?text=${encodedMessage}`
 }
 
+export function generateServiceOrderMessage(serviceName: string): string {
+  return `System Log: Permintaan layanan baru untuk Cell'EX.
+Layanan: ${serviceName}
+Mohon informasi lebih lanjut terkait instalasi dan estimasi pengerjaan.`
+}
+
 export function formatPrice(price: string): string {
   return price
 }

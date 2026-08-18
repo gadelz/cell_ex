@@ -1,10 +1,13 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { services } from '@/data/services'
 import { ServiceRow } from '@/components/ServiceRow'
+import { ServiceDetailPanel } from '@/components/ServiceDetailPanel'
 import { Button } from '@/components/Button'
 import Link from 'next/link'
+import type { Service } from '@/lib/types'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -18,6 +21,8 @@ const containerVariants = {
 }
 
 export function ServicesSection() {
+  const [selectedService, setSelectedService] = useState<Service | null>(null)
+
   const digitalServices = services.filter(s => s.category === 'Digital')
   const technicalServices = services.filter(s => s.category === 'Teknis')
 
@@ -42,7 +47,7 @@ export function ServicesSection() {
           </h2>
 
           <p className="font-sans font-light text-lg text-[rgba(243,244,246,0.5)] max-w-2xl">
-            Pilih layanan yang dibutuhkan. Klik baris untuk detail lebih lanjut via WhatsApp.
+            Pilih layanan yang dibutuhkan. Klik baris untuk melihat detail dan pesan via WhatsApp.
           </p>
         </motion.div>
 
@@ -77,7 +82,12 @@ export function ServicesSection() {
             {/* Rows */}
             <div>
               {digitalServices.map((service, index) => (
-                <ServiceRow key={service.id} service={service} index={index} />
+                <ServiceRow
+                  key={service.id}
+                  service={service}
+                  index={index}
+                  onClick={() => setSelectedService(service)}
+                />
               ))}
             </div>
           </div>
@@ -115,7 +125,12 @@ export function ServicesSection() {
             {/* Rows */}
             <div>
               {technicalServices.map((service, index) => (
-                <ServiceRow key={service.id} service={service} index={digitalServices.length + index} />
+                <ServiceRow
+                  key={service.id}
+                  service={service}
+                  index={digitalServices.length + index}
+                  onClick={() => setSelectedService(service)}
+                />
               ))}
             </div>
           </div>
@@ -140,6 +155,12 @@ export function ServicesSection() {
           </Button>
         </motion.div>
       </div>
+
+      {/* Slide-Over Detail Panel */}
+      <ServiceDetailPanel
+        service={selectedService}
+        onClose={() => setSelectedService(null)}
+      />
     </section>
   )
 }
