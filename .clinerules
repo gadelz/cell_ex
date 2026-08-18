@@ -1,0 +1,44 @@
+# Cline Custom Rules - Vibe Coding Mode
+
+## General Behavior
+- Read before writing: Always read existing files before editing
+- Test your code: Run relevant tests after making changes
+- Explain simply: Comment complex logic, but don't over-comment obvious code
+- Before making structural changes (renaming folders, moving files, or changing project architecture), ask for confirmation
+
+## Project Structure
+- Follow existing patterns in the codebase
+- Don't create files outside the project without asking
+- Use TypeScript/JavaScript consistently (no mixing styles)
+
+## Safety
+- NEVER run destructive commands without confirmation (rm -rf, git reset --hard, drop table)
+- Check git status before committing
+- Ask before installing new npm dependencies for production
+
+## Context Management
+- Use `read_file` only on necessary files — don't read entire codebase upfront
+- Summarize changes and current state at the end of each task to manage context efficiently
+
+## Environment & Standards
+- Strictly follow the project's linting and formatting rules (e.g., ESLint, Prettier). Auto-fix any lint errors before requesting review.
+- For JavaScript/TypeScript projects, use only the module syntax already established in the codebase (CommonJS or ESM). Do not mix them.
+
+## Package Management
+- After modifying `package.json`, run the package manager that matches the existing lockfile (`npm install`, `yarn install`, or `pnpm install`). Never update `package.json` without also updating the lockfile.
+
+## Git Commit Strategy
+- Write concise, conventional commits (e.g., `feat: add login button`, `fix: resolve API crash`). Reject blank or generic messages like "changes made".
+
+## Vibe Coding Specific
+- Focus on getting things done, not perfection
+- Build in small chunks and verify as you go
+- Don't over-engineer solutions
+- Keep context minimal - compact when context gets large
+- Prioritize working code over perfect code
+
+## Cell'EX Project Context & Memory Bank (CRITICAL)
+- Project Identity: Proyek ini adalah web direktori layanan digital dan teknis bernama "Cell'EX".
+- Design Rules: Wajib menggunakan estetika "Dark Tech Minimalist". DILARANG menggunakan gaya template AI generik (seperti biru tech, gradien ungu, drop-shadow tebal, atau border sangat membulat).
+- Memory Bank: SEBELUM mengeksekusi tugas atau membuat komponen baru, kamu WAJIB membaca dan menerapkan referensi dari docs/design-system.md, docs/tech-stack.md, dan docs/project-brief.md.
+- Execution: Jangan membuat asumsi desain sendiri. Selalu ikuti panduan palet warna dan tipografi monospace yang ada di Memory Bank.

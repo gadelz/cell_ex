@@ -1,0 +1,74 @@
+[
+  {
+    "id": "web-dev",
+    "name": "Pengembangan Website",
+    "category": "Digital",
+    "description": "Website modern, responsif, dan cepat. Menggunakan Next.js, React, dan Tailwind CSS. Termasuk deployment dan domain setup.",
+    "price": "Mulai Rp 2.500.000",
+    "features": ["Responsive Design", "SEO Ready", "CMS Optional", "Deploy Vercel/Netlify"],
+    "whatsappMessage": "Halo Cell'EX, saya tertarik dengan layanan Pengembangan Website. Bisa dibantu info lebih lanjut?"
+  },
+  {
+    "id": "api-dev",
+    "name": "REST API / Backend Development",
+    "category": "Digital",
+    "description": "Pembangunan API scalable dengan Node.js/Express atau Go. Database PostgreSQL/MongoDB. Auth JWT, rate limiting, dokumentasi Swagger.",
+    "price": "Mulai Rp 1.800.000",
+    "features": ["RESTful / GraphQL", "JWT Auth", "Swagger Docs", "Docker Ready"],
+    "whatsappMessage": "Halo Cell'EX, saya butuh layanan REST API / Backend Development. Bisa diskusi requirement?"
+  },
+  {
+    "id": "mobile-app",
+    "name": "Aplikasi Mobile (React Native)",
+    "category": "Digital",
+    "description": "Aplikasi iOS & Android single codebase. Expo/React Native CLI. Push notification, offline support, app store deployment.",
+    "price": "Mulai Rp 5.000.000",
+    "features": ["Cross-platform", "Push Notifications", "Offline Mode", "App Store Deploy"],
+    "whatsappMessage": "Halo Cell'EX, saya ingin buat aplikasi mobile. Bisa konsultasi dulu?"
+  },
+  {
+    "id": "laptop-repair",
+    "name": "Service Laptop / PC",
+    "category": "Teknis",
+    "description": "Diagnosa hardware & software. Ganti thermal paste, upgrade SSD/RAM, install ulang Windows/Linux, troubleshooting error.",
+    "price": "Mulai Rp 150.000",
+    "features": ["Diagnosa Gratis", "Garansi Service", "Pickup Area Tertentu", "Original Parts"],
+    "whatsappMessage": "Halo Cell'EX, laptop saya bermasalah. Bisa di-service?"
+  },
+  {
+    "id": "phone-repair",
+    "name": "Service HP / Smartphone",
+    "category": "Teknis",
+    "description": "Ganti layar, battery, charging port, kamera. Unlock FRP, flash firmware, data recovery. Spare part berkualitas.",
+    "price": "Mulai Rp 200.000",
+    "features": ["Original/Grade A Parts", "Garansi 3 Bulan", "Express 1 Jam", "Data Aman"],
+    "whatsappMessage": "Halo Cell'EX, HP saya butuh service. Berapa estimasi biayanya?"
+  },
+  {
+    "id": "network-setup",
+    "name": "Setup Jaringan & Server",
+    "category": "Teknis",
+    "description": "Konfigurasi router, VLAN, VPN, firewall. Setup home/office network. Linux server hardening, Docker, reverse proxy Nginx.",
+    "price": "Mulai Rp 500.000",
+    "features": ["Network Design", "Security Hardening", "Monitoring Setup", "Dokumentasi Lengkap"],
+    "whatsappMessage": "Halo Cell'EX, butuh bantu setup jaringan kantor/rumah. Bisa survey dulu?"
+  },
+  {
+    "id": "ui-design",
+    "name": "UI/UX Design & Prototyping",
+    "category": "Digital",
+    "description": "Desain interface modern Figma. User research, wireframe, prototype interaktif, design system, handoff ke developer.",
+    "price": "Mulai Rp 1.200.000",
+    "features": ["Figma Source File", "Design System", "Interactive Prototype", "Developer Handoff"],
+    "whatsappMessage": "Halo Cell'EX, butuh desain UI/UX untuk project saya. Bisa lihat portfolio dulu?"
+  },
+  {
+    "id": "seo-audit",
+    "name": "SEO Audit & Optimasi",
+    "category": "Digital",
+    "description": "Audit teknis, on-page, off-page. Keyword research, competitor analysis, core web vitals, schema markup, laporan bulanan.",
+    "price": "Mulai Rp 800.000",
+    "features": ["Technical Audit", "Keyword Strategy", "Monthly Report", "Core Web Vitals"],
+    "whatsappMessage": "Halo Cell'EX, mau audit SEO website saya. Prosesnya gimana?"
+  }
+]
