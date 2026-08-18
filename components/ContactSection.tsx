@@ -13,8 +13,8 @@ const contactMethods = [
       </svg>
     ),
     title: 'Email',
-    value: 'hello@cellex.dev',
-    href: 'mailto:hello@cellex.dev',
+    value: 'gadelzex@gmail.com',
+    href: 'mailto:gadelzex@gmail.com',
     desc: 'Untuk proposal formal & dokumen'
   },
   {
@@ -24,7 +24,7 @@ const contactMethods = [
       </svg>
     ),
     title: 'WhatsApp',
-    value: '+62 812-3456-7890',
+    value: '+62 838-6301-7186',
     href: generateWhatsAppLink("Halo Cell'EX, saya ingin konsultasi layanan"),
     desc: 'Respon cepat &lt; 5 menit (jam kerja)',
     isPrimary: true

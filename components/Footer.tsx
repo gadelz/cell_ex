@@ -36,7 +36,7 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-4">
               <a
-                href="https://wa.me/6281234567890"
+                href="https://wa.me/6283863017186"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-sm bg-cell-bg border border-[rgba(243,244,246,0.1)] flex items-center justify-center text-cell-emerald hover:bg-cell-emerald hover:text-cell-bg transition-colors"
@@ -47,7 +47,7 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="mailto:hello@cellex.dev"
+                href="mailto:gadelzex@gmail.com"
                 className="w-10 h-10 rounded-sm bg-cell-bg border border-[rgba(243,244,246,0.1)] flex items-center justify-center text-[rgba(243,244,246,0.7)] hover:border-cell-emerald/50 hover:text-cell-emerald transition-colors"
                 aria-label="Email"
               >
